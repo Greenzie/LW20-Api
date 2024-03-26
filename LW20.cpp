@@ -15,7 +15,7 @@ bool getPacket(lwLW20* Lw20, lwResponsePacket* Packet)
 	Packet->data.length = 0;
 	Packet->type = LWC_NONE;
 
-	int32_t timeout = millis() + 2000;
+	uint32_t timeout = millis() + 2000;
 	bool timedOut = false;
 	while (!(timedOut = !(millis() < timeout)))
 	{
